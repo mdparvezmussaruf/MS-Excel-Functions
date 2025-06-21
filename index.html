@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Excel Functions Cheat Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        code {
+            background: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Excel Functions Cheat Sheet</h1>
+
+    <h2>1️⃣ Basic Arithmetic Operators</h2>
+    <table>
+        <tr><th>Operator</th><th>Purpose</th></tr>
+        <tr><td>+</td><td>Adds two numbers</td></tr>
+        <tr><td>-</td><td>Subtracts one number from another</td></tr>
+        <tr><td>*</td><td>Multiplies two numbers</td></tr>
+        <tr><td>/</td><td>Divides one number by another</td></tr>
+        <tr><td>^</td><td>Raises a number to the power of another</td></tr>
+    </table>
+
+    <h2>2️⃣ Mathematical Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Syntax</th><th>Example</th><th>Description</th></tr>
+        <tr><td>SUM</td><td>=SUM(number1, [number2], ...)</td><td>=SUM(A1:A5)</td><td>Adds numbers</td></tr>
+        <tr><td>AVERAGE</td><td>=AVERAGE(number1, ...)</td><td>=AVERAGE(A1:A5)</td><td>Calculates the mean</td></tr>
+        <tr><td>MIN</td><td>=MIN(number1, ...)</td><td>=MIN(A1:A5)</td><td>Returns smallest number</td></tr>
+        <tr><td>MAX</td><td>=MAX(number1, ...)</td><td>=MAX(A1:A5)</td><td>Returns largest number</td></tr>
+        <tr><td>ROUND</td><td>=ROUND(number, num_digits)</td><td>=ROUND(A1, 2)</td><td>Rounds number</td></tr>
+        <tr><td>COUNT</td><td>=COUNT(value1, ...)</td><td>=COUNT(A1:A5)</td><td>Counts numeric values</td></tr>
+        <tr><td>COUNTA</td><td>=COUNTA(value1, ...)</td><td>=COUNTA(A1:A5)</td><td>Counts non-empty cells</td></tr>
+        <tr><td>ABS</td><td>=ABS(number)</td><td>=ABS(-10)</td><td>Absolute value</td></tr>
+    </table>
+
+    <h2>3️⃣ Logical Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Syntax</th><th>Example</th><th>Description</th></tr>
+        <tr><td>IF</td><td>=IF(condition, true_value, false_value)</td><td>=IF(A1>10,"Yes","No")</td><td>Returns "Yes" if TRUE</td></tr>
+        <tr><td>AND</td><td>=AND(condition1, ...)</td><td>=AND(A1>5,B1<10)</td><td>TRUE if all TRUE</td></tr>
+        <tr><td>OR</td><td>=OR(condition1, ...)</td><td>=OR(A1>5,B1<10)</td><td>TRUE if any TRUE</td></tr>
+        <tr><td>NOT</td><td>=NOT(logical)</td><td>=NOT(A1>5)</td><td>Opposite of condition</td></tr>
+    </table>
+
+    <h2>4️⃣ Lookup & Reference</h2>
+    <table>
+        <tr><th>Function</th><th>Syntax</th><th>Example</th><th>Description</th></tr>
+        <tr><td>VLOOKUP</td><td>=VLOOKUP(value, table, col, [range])</td><td>=VLOOKUP(101,A2:C10,2,FALSE)</td><td>Vertical lookup</td></tr>
+        <tr><td>HLOOKUP</td><td>=HLOOKUP(value, table, row, [range])</td><td>=HLOOKUP("Jan",A1:Z3,2,FALSE)</td><td>Horizontal lookup</td></tr>
+        <tr><td>INDEX</td><td>=INDEX(array, row, [col])</td><td>=INDEX(A1:C5,2,3)</td><td>Value from row & col</td></tr>
+        <tr><td>MATCH</td><td>=MATCH(value, array, [type])</td><td>=MATCH(50,A1:A10,0)</td><td>Position of value</td></tr>
+        <tr><td>XLOOKUP</td><td>=XLOOKUP(value, array, return_array, [not_found])</td><td>=XLOOKUP(101,A2:A10,B2:B10,"Not Found")</td><td>Modern lookup</td></tr>
+    </table>
+
+    <h2>5️⃣ Text Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Syntax</th><th>Example</th><th>Description</th></tr>
+        <tr><td>CONCAT</td><td>=CONCAT(text1, text2, ...)</td><td>=CONCAT(A1,B1)</td><td>Joins text strings</td></tr>
+        <tr><td>TEXTJOIN</td><td>=TEXTJOIN(delimiter, ignore_empty, text1, ...)</td><td>=TEXTJOIN(", ",TRUE,A1:A5)</td><td>Joins with delimiter</td></tr>
+        <tr><td>LEFT</td><td>=LEFT(text, num_chars)</td><td>=LEFT(A1,5)</td><td>First N characters</td></tr>
+        <tr><td>RIGHT</td><td>=RIGHT(text, num_chars)</td><td>=RIGHT(A1,3)</td><td>Last N characters</td></tr>
+        <tr><td>MID</td><td>=MID(text,start,num_chars)</td><td>=MID(A1,3,4)</td><td>Substring from middle</td></tr>
+        <tr><td>LEN</td><td>=LEN(text)</td><td>=LEN(A1)</td><td>Character count</td></tr>
+        <tr><td>TRIM</td><td>=TRIM(text)</td><td>=TRIM(A1)</td><td>Removes extra spaces</td></tr>
+        <tr><td>UPPER</td><td>=UPPER(text)</td><td>=UPPER(A1)</td><td>Uppercase text</td></tr>
+        <tr><td>LOWER</td><td>=LOWER(text)</td><td>=LOWER(A1)</td><td>Lowercase text</td></tr>
+        <tr><td>PROPER</td><td>=PROPER(text)</td><td>=PROPER(A1)</td><td>Capitalizes first letter of each word</td></tr>
+    </table>
+
+    <h2>6️⃣ Date & Time Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Syntax</th><th>Example</th><th>Description</th></tr>
+        <tr><td>TODAY</td><td>=TODAY()</td><td>=TODAY()</td><td>Current date</td></tr>
+        <tr><td>NOW</td><td>=NOW()</td><td>=NOW()</td><td>Current date & time</td></tr>
+        <tr><td>DAY</td><td>=DAY(serial_number)</td><td>=DAY(A1)</td><td>Day of date</td></tr>
+        <tr><td>MONTH</td><td>=MONTH(serial_number)</td><td>=MONTH(A1)</td><td>Month of date</td></tr>
+        <tr><td>YEAR</td><td>=YEAR(serial_number)</td><td>=YEAR(A1)</td><td>Year of date</td></tr>
+        <tr><td>HOUR</td><td>=HOUR(serial_number)</td><td>=HOUR(A1)</td><td>Hour from time</td></tr>
+        <tr><td>MINUTE</td><td>=MINUTE(serial_number)</td><td>=MINUTE(A1)</td><td>Minute from time</td></tr>
+        <tr><td>SECOND</td><td>=SECOND(serial_number)</td><td>=SECOND(A1)</td><td>Second from time</td></tr>
+        <tr><td>DATEDIF</td><td>=DATEDIF(start_date, end_date, unit)</td><td>=DATEDIF(A1,B1,"Y")</td><td>Difference between dates</td></tr>
+        <tr><td>NETWORKDAYS</td><td>=NETWORKDAYS(start_date, end_date, [holidays])</td><td>=NETWORKDAYS(A1,B1)</td><td>Workdays between dates</td></tr>
+    </table>
+
+    <h2>7️⃣ Financial Functions</h2>
+    <table>
+        <tr><th>Function</th><th>Syntax</th><th>Example</th><th>Description</th></tr>
+        <tr><td>PMT</td><td>=PMT(rate, nper, pv, [fv], [type])</td><td>=PMT(5%/12,60,-10000)</td><td>Loan payment</td></tr>
+    </table>
+
+    <h2>8️⃣ Error Handling</h2>
+    <table>
+        <tr><th>Function</th><th>Syntax</th><th>Example</th><th>Description</th></tr>
+        <tr><td>IFERROR</td><td>=IFERROR(value, value_if_error)</td><td>=IFERROR(A1/B1,"Error!")</td><td>Handles errors gracefully</td></tr>
+    </table>
+
+    <h2>9️⃣ Miscellaneous</h2>
+    <table>
+        <tr><th>Function</th><th>Syntax</th><th>Example</th><th>Description</th></tr>
+        <tr><td>UNIQUE</td><td>=UNIQUE(array)</td><td>=UNIQUE(A1:A10)</td><td>Unique values</td></tr>
+        <tr><td>FILTER</td><td>=FILTER(array, include, [if_empty])</td><td>=FILTER(A2:A10,B2:B10="Yes")</td><td>Filter array</td></tr>
+        <tr><td>SORT</td><td>=SORT(array, [sort_index], [sort_order], [by_col])</td><td>=SORT(A1:A10)</td><td>Sort array</td></tr>
+    </table>
+
+</body>
+</html>
