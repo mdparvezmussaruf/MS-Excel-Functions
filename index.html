@@ -11,42 +11,92 @@
             background-color: #f8f8f8;
             color: #333;
         }
+
         h1 {
             text-align: center;
             color: #2c3e50;
         }
+
         h2 {
             color: #34495e;
             margin-top: 40px;
         }
+
         table {
             border-collapse: collapse;
             width: 100%;
             margin-bottom: 30px;
             background-color: #fff;
         }
+
         th, td {
             border: 1px solid #ccc;
             padding: 12px 15px;
             text-align: left;
         }
+
         th {
             background-color: #2ecc71;
             color: #fff;
         }
+
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
         code {
             background: #e8e8e8;
             padding: 2px 4px;
             border-radius: 4px;
             font-family: Consolas, monospace;
         }
+
+        /* Shortcut toggle button */
+        #toggleShortcuts {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        #toggleShortcuts:hover {
+            background-color: #27ae60;
+        }
+
+        /* Go back button */
+        #goBackBtn {
+            background-color: #34495e;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        #goBackBtn:hover {
+            background-color: #2c3e50;
+        }
+
+        /* Shortcut page styling */
+        #shortcutPage {
+            display: none;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Main Page -->
+    <div id="mainPage">
     <h1>Excel Functions Cheat Sheet</h1>
 
     <h2>1️⃣ Basic Arithmetic Operators</h2>
@@ -141,5 +191,113 @@
         <tr><td>SORT</td><td>=SORT(array, [sort_index], [sort_order], [by_col])</td><td>=SORT(A1:A10)</td><td>Sort array</td></tr>
     </table>
 
+
+        <!-- You can continue all the rest of your original tables here -->
+        <!-- ... -->
+    </div>
+
+    <!-- Shortcut Page -->
+    <section id="shortcutPage">
+        <h1>🧠 Excel Shortcut Commands</h1>
+        <button id="goBackBtn">⬅️ Go Back</button>
+
+   <h2>🔹 Basic Shortcuts</h2>
+    <table>
+      <tr><th>Action</th><th>Shortcut</th></tr>
+      <tr><td>New Workbook</td><td>Ctrl + N</td></tr>
+      <tr><td>Open Workbook</td><td>Ctrl + O</td></tr>
+      <tr><td>Save</td><td>Ctrl + S</td></tr>
+      <tr><td>Close Workbook</td><td>Ctrl + W</td></tr>
+      <tr><td>Undo</td><td>Ctrl + Z</td></tr>
+      <tr><td>Redo</td><td>Ctrl + Y</td></tr>
+      <tr><td>Copy</td><td>Ctrl + C</td></tr>
+      <tr><td>Cut</td><td>Ctrl + X</td></tr>
+      <tr><td>Paste</td><td>Ctrl + V</td></tr>
+      <tr><td>Select All</td><td>Ctrl + A</td></tr>
+      <tr><td>Print</td><td>Ctrl + P</td></tr>
+    </table>
+
+    <h2>🔹 Navigation</h2>
+    <table>
+      <tr><th>Action</th><th>Shortcut</th></tr>
+      <tr><td>Move to next cell</td><td>Tab</td></tr>
+      <tr><td>Move to previous cell</td><td>Shift + Tab</td></tr>
+      <tr><td>Move to beginning of row</td><td>Home</td></tr>
+      <tr><td>Move to beginning of worksheet</td><td>Ctrl + Home</td></tr>
+      <tr><td>Move to end of worksheet</td><td>Ctrl + End</td></tr>
+      <tr><td>Move one screen down</td><td>Page Down</td></tr>
+      <tr><td>Move one screen up</td><td>Page Up</td></tr>
+      <tr><td>Next worksheet</td><td>Ctrl + Page Down</td></tr>
+      <tr><td>Previous worksheet</td><td>Ctrl + Page Up</td></tr>
+    </table>
+
+    <h2>🔹 Formatting</h2>
+    <table>
+      <tr><th>Action</th><th>Shortcut</th></tr>
+      <tr><td>Bold</td><td>Ctrl + B</td></tr>
+      <tr><td>Italic</td><td>Ctrl + I</td></tr>
+      <tr><td>Underline</td><td>Ctrl + U</td></tr>
+      <tr><td>Format cells dialog</td><td>Ctrl + 1</td></tr>
+      <tr><td>Add border</td><td>Ctrl + Shift + &</td></tr>
+      <tr><td>Remove border</td><td>Ctrl + Shift + _</td></tr>
+      <tr><td>Center align</td><td>Alt + H + A + C</td></tr>
+      <tr><td>Left align</td><td>Alt + H + A + L</td></tr>
+      <tr><td>Right align</td><td>Alt + H + A + R</td></tr>
+    </table>
+
+    <h2>🔹 Working with Cells</h2>
+    <table>
+      <tr><th>Action</th><th>Shortcut</th></tr>
+      <tr><td>Insert new row</td><td>Ctrl + Shift + +</td></tr>
+      <tr><td>Delete row</td><td>Ctrl + -</td></tr>
+      <tr><td>Insert current date</td><td>Ctrl + ;</td></tr>
+      <tr><td>Insert current time</td><td>Ctrl + Shift + ;</td></tr>
+      <tr><td>New line in a cell</td><td>Alt + Enter</td></tr>
+      <tr><td>Fill down</td><td>Ctrl + D</td></tr>
+      <tr><td>Fill right</td><td>Ctrl + R</td></tr>
+    </table>
+
+    <h2>🔹 Formulas</h2>
+    <table>
+      <tr><th>Action</th><th>Shortcut</th></tr>
+      <tr><td>Start a formula</td><td>=</td></tr>
+      <tr><td>Insert function</td><td>Shift + F3</td></tr>
+      <tr><td>Show formulas</td><td>Ctrl + `</td></tr>
+      <tr><td>Calculate active worksheet</td><td>Shift + F9</td></tr>
+      <tr><td>Autosum</td><td>Alt + =</td></tr>
+    </table>
+
+    <h2>🔹 Tables & Data</h2>
+    <table>
+      <tr><th>Action</th><th>Shortcut</th></tr>
+      <tr><td>Create a table</td><td>Ctrl + T</td></tr>
+      <tr><td>Filter</td><td>Ctrl + Shift + L</td></tr>
+      <tr><td>Open filter dropdown</td><td>Alt + ↓</td></tr>
+      <tr><td>Group rows/columns</td><td>Alt + Shift + →</td></tr>
+      <tr><td>Ungroup rows/columns</td><td>Alt + Shift + ←</td></tr>
+    </table>
+
+    </section>
+
+    <!-- Floating Button -->
+    <button id="toggleShortcuts" title="View Excel Shortcuts">⌨</button>
+
+    <!-- Script -->
+    <script>
+        const toggleBtn = document.getElementById('toggleShortcuts');
+        const shortcutPage = document.getElementById('shortcutPage');
+        const mainPage = document.getElementById('mainPage');
+        const goBackBtn = document.getElementById('goBackBtn');
+
+        toggleBtn.addEventListener('click', () => {
+            mainPage.style.display = 'none';
+            shortcutPage.style.display = 'block';
+        });
+
+        goBackBtn.addEventListener('click', () => {
+            shortcutPage.style.display = 'none';
+            mainPage.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
