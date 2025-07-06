@@ -7,7 +7,12 @@ body {
 
 h1 {
   text-align: center;
-  color: #2c3e50;
+  color: #162029;
+  background-color: darkgray;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: #333 0px 10px 0px;
+
 }
 
 h2 {
@@ -66,18 +71,20 @@ code {
 
 /* Go back button */
 #goBackBtn {
-  background-color: #34495e;
-  color: white;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px 16px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
   margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 #goBackBtn:hover {
-  background-color: #2c3e50;
+  background-color: #5b6b7a;
+
 }
 
 /* Shortcut page styling */
