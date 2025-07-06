@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Excel Functions Cheat Sheet</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Excel Cheatsheet</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Main Page -->
   <div id="mainPage">
-    <h1>Excel Functions Cheat Sheet</h1>
-
-     <h2>1️⃣ Basic Arithmetic Operators</h2>
+    <h1>📘 Excel Functions Cheat Sheet</h1>
+    <!-- Your existing function tables here (basic, math, logical, etc.) -->
+    <!-- Keep all 9 sections from your original code -->
+          <h2>1️⃣ Basic Arithmetic Operators</h2>
     <table>
         <tr><th>Operator</th><th>Purpose</th></tr>
         <tr><td>+</td><td>Adds two numbers</td></tr>
@@ -104,16 +105,14 @@
         <tr><td>SORT</td><td>=SORT(array, [sort_index], [sort_order], [by_col])</td><td>=SORT(A1:A10)</td><td>Sort array</td></tr>
     </table>
 
-    <!-- Keep adding all function categories like Mathematical, Logical, Lookup, Text, etc. as needed -->
-    <!-- You already pasted them, so just continue this structure here -->
   </div>
 
   <!-- Shortcut Page -->
-  <section id="shortcutPage">
-    <h1>🧠 Excel Shortcut Commands</h1>
+  <section id="shortcutPage" style="display: none;">
+    <h1>⌨️ Excel Shortcut Commands</h1>
     <button id="goBackBtn">⬅️ Go Back</button>
-
-   <h2>🔹 Basic Shortcuts</h2>
+    <!-- Shortcut tables go here -->
+        <h2>🔹 Basic Shortcuts</h2>
     <table>
       <tr><th>Action</th><th>Shortcut</th></tr>
       <tr><td>New Workbook</td><td>Ctrl + N</td></tr>
@@ -188,14 +187,79 @@
       <tr><td>Group rows/columns</td><td>Alt + Shift + →</td></tr>
       <tr><td>Ungroup rows/columns</td><td>Alt + Shift + ←</td></tr>
     </table>
-
-
   </section>
 
-  <!-- Floating Button -->
-  <button id="toggleShortcuts" title="View Excel Shortcuts">⌨️</button>
+  <!-- Advanced Page -->
+  <section id="advancedPage" style="display: none;">
+    <h1>💡 Advanced Excel Functions Cheat Sheet</h1>
+    <button id="goBackBtnAdvanced">⬅️ Go Back</button>
+    <!-- Paste advanced functions content here from previous message -->
+     
 
-  <!-- JavaScript -->
+  <h2>🔟 Array & Dynamic Array Functions</h2>
+  <table>
+    <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+    <tr><td>SEQUENCE</td><td>=SEQUENCE(rows, [cols], [start], [step])</td><td>Creates number sequence</td></tr>
+    <tr><td>RANDARRAY</td><td>=RANDARRAY([rows], [cols], [min], [max], [integer])</td><td>Random number array</td></tr>
+    <tr><td>SORTBY</td><td>=SORTBY(array, by_array1, [order1])</td><td>Sort by values in another array</td></tr>
+    <tr><td>LET</td><td>=LET(name, value, calculation)</td><td>Names variables inside formula</td></tr>
+    <tr><td>LAMBDA</td><td>=LAMBDA(parameter, formula)</td><td>Custom reusable formula</td></tr>
+    <tr><td>SCAN</td><td>=SCAN(initial, array, lambda)</td><td>Accumulates result across array</td></tr>
+    <tr><td>REDUCE</td><td>=REDUCE(initial, array, lambda)</td><td>Reduces array to single result</td></tr>
+  </table>
+
+  <h2>1️⃣1️⃣ Statistical Functions</h2>
+  <table>
+    <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+    <tr><td>MEDIAN</td><td>=MEDIAN(range)</td><td>Middle value of dataset</td></tr>
+    <tr><td>MODE.SNGL</td><td>=MODE.SNGL(range)</td><td>Most frequent value</td></tr>
+    <tr><td>STDEV.S</td><td>=STDEV.S(range)</td><td>Sample standard deviation</td></tr>
+    <tr><td>VAR.S</td><td>=VAR.S(range)</td><td>Sample variance</td></tr>
+    <tr><td>CORREL</td><td>=CORREL(array1, array2)</td><td>Correlation between two arrays</td></tr>
+    <tr><td>PERCENTILE.EXC</td><td>=PERCENTILE.EXC(range, k)</td><td>k-th percentile (excl. endpoints)</td></tr>
+    <tr><td>QUARTILE.EXC</td><td>=QUARTILE.EXC(range, quart)</td><td>Quartile excluding endpoints</td></tr>
+  </table>
+
+  <h2>1️⃣2️⃣ Database Functions</h2>
+  <table>
+    <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+    <tr><td>DSUM</td><td>=DSUM(database, field, criteria)</td><td>Sum based on criteria</td></tr>
+    <tr><td>DCOUNT</td><td>=DCOUNT(database, field, criteria)</td><td>Count matching numeric values</td></tr>
+    <tr><td>DAVERAGE</td><td>=DAVERAGE(database, field, criteria)</td><td>Average matching rows</td></tr>
+    <tr><td>DGET</td><td>=DGET(database, field, criteria)</td><td>Return single matching row</td></tr>
+  </table>
+
+  <h2>1️⃣3️⃣ Information Functions</h2>
+  <table>
+    <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+    <tr><td>ISNUMBER</td><td>=ISNUMBER(value)</td><td>Checks if value is number</td></tr>
+    <tr><td>ISERROR</td><td>=ISERROR(value)</td><td>Checks if value has any error</td></tr>
+    <tr><td>ISBLANK</td><td>=ISBLANK(value)</td><td>Checks if cell is empty</td></tr>
+    <tr><td>TYPE</td><td>=TYPE(value)</td><td>Returns type: number=1, text=2, etc.</td></tr>
+    <tr><td>CELL</td><td>=CELL(info_type, [ref])</td><td>Returns cell metadata</td></tr>
+  </table>
+
+  <h2>1️⃣4️⃣ Engineering Functions</h2>
+  <table>
+    <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+    <tr><td>CONVERT</td><td>=CONVERT(number, from_unit, to_unit)</td><td>Unit conversions</td></tr>
+    <tr><td>BIN2DEC</td><td>=BIN2DEC(number)</td><td>Binary to decimal</td></tr>
+    <tr><td>DEC2BIN</td><td>=DEC2BIN(number)</td><td>Decimal to binary</td></tr>
+    <tr><td>HEX2DEC</td><td>=HEX2DEC(number)</td><td>Hex to decimal</td></tr>
+    <tr><td>IMREAL</td><td>=IMREAL("a+bi")</td><td>Returns real part of complex number</td></tr>
+    <tr><td>IMABS</td><td>=IMABS("a+bi")</td><td>Returns absolute value of complex number</td></tr>
+  </table>
+  </section>
+
+  <!-- Floating Toggle Menu -->
+  <div class="floating-menu" id="floatingMenu">
+    <button id="mainToggle">☰</button>
+    <div class="menu-options" id="menuOptions">
+      <button class="option-btn" id="showShortcuts">⌨️ Shortcuts</button>
+      <button class="option-btn" id="showAdvanced">🚀 Advanced</button>
+    </div>
+  </div>
+
   <script src="index.js"></script>
 </body>
 </html>
