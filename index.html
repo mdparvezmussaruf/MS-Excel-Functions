@@ -249,6 +249,66 @@
     <tr><td>IMREAL</td><td>=IMREAL("a+bi")</td><td>Returns real part of complex number</td></tr>
     <tr><td>IMABS</td><td>=IMABS("a+bi")</td><td>Returns absolute value of complex number</td></tr>
   </table>
+
+   <h2>📊 Array & Matrix Functions</h2>
+    <table>
+      <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+      <tr><td>TRANSPOSE</td><td>=TRANSPOSE(array)</td><td>Rotates rows to columns and vice versa</td></tr>
+      <tr><td>MMULT</td><td>=MMULT(array1, array2)</td><td>Matrix multiplication</td></tr>
+      <tr><td>INDEX + MATCH</td><td>=INDEX(array, MATCH(...))</td><td>Advanced lookup combo</td></tr>
+      <tr><td>OFFSET</td><td>=OFFSET(ref, rows, cols, [h], [w])</td><td>Range from offset</td></tr>
+      <tr><td>INDIRECT</td><td>=INDIRECT(ref_text)</td><td>Returns reference from text</td></tr>
+      <tr><td>FORMULATEXT</td><td>=FORMULATEXT(ref)</td><td>Returns the formula as text</td></tr>
+    </table>
+
+    <h2>📆 Date & Time Extensions</h2>
+    <table>
+      <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+      <tr><td>WORKDAY</td><td>=WORKDAY(start_date, days, [holidays])</td><td>Future workday</td></tr>
+      <tr><td>EOMONTH</td><td>=EOMONTH(start_date, months)</td><td>Last day of month</td></tr>
+      <tr><td>EDATE</td><td>=EDATE(start_date, months)</td><td>Add months to date</td></tr>
+    </table>
+
+    <h2>📉 Statistical & Financial</h2>
+    <table>
+      <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+      <tr><td>STDEV.P</td><td>=STDEV.P(range)</td><td>Standard deviation (Population)</td></tr>
+      <tr><td>STDEV.S</td><td>=STDEV.S(range)</td><td>Standard deviation (Sample)</td></tr>
+      <tr><td>VAR.P</td><td>=VAR.P(range)</td><td>Variance (Population)</td></tr>
+      <tr><td>VAR.S</td><td>=VAR.S(range)</td><td>Variance (Sample)</td></tr>
+      <tr><td>NPV</td><td>=NPV(rate, value1, ...)</td><td>Net present value</td></tr>
+      <tr><td>IRR</td><td>=IRR(values)</td><td>Internal rate of return</td></tr>
+    </table>
+
+    <h2>🧠 Text Intelligence</h2>
+    <table>
+      <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+      <tr><td>TEXT</td><td>=TEXT(value, format_text)</td><td>Formats value as text</td></tr>
+      <tr><td>SEARCH</td><td>=SEARCH(find, within)</td><td>Position of substring</td></tr>
+      <tr><td>FIND</td><td>=FIND(find, within)</td><td>Case-sensitive search</td></tr>
+      <tr><td>REPLACE</td><td>=REPLACE(text, start, num, new_text)</td><td>Replace text by position</td></tr>
+      <tr><td>SUBSTITUTE</td><td>=SUBSTITUTE(text, old, new)</td><td>Replace text by match</td></tr>
+    </table>
+
+    <h2>🧰 Info & Utility</h2>
+    <table>
+      <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+      <tr><td>ISERROR</td><td>=ISERROR(value)</td><td>Checks for error</td></tr>
+      <tr><td>ISNUMBER</td><td>=ISNUMBER(value)</td><td>Checks if number</td></tr>
+      <tr><td>ISBLANK</td><td>=ISBLANK(cell)</td><td>Checks if blank</td></tr>
+      <tr><td>CELL</td><td>=CELL(info_type, ref)</td><td>Returns cell info</td></tr>
+      <tr><td>INFO</td><td>=INFO(type_text)</td><td>System environment info</td></tr>
+      <tr><td>TYPE</td><td>=TYPE(value)</td><td>Returns data type</td></tr>
+    </table>
+
+    <h2>🧪 Bonus (Dynamic & Logical)</h2>
+    <table>
+      <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
+      <tr><td>SINGLE</td><td>=SINGLE(value)</td><td>Ensures single value</td></tr>
+      <tr><td>XOR</td><td>=XOR(logical1, logical2)</td><td>Exclusive OR logic</td></tr>
+      <tr><td>SWITCH</td><td>=SWITCH(expr, val1, res1,...)</td><td>Conditional branching</td></tr>
+    </table>
+    
   </section>
 
   <!-- Floating Toggle Menu -->
