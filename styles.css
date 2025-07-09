@@ -1,7 +1,7 @@
 body { 
   font-family: Arial, sans-serif;
   margin: 20px;
-  background-color: #f8f8f8;
+  background-color: #FFF9F7;
   color: #333;
 }
 
@@ -33,7 +33,7 @@ th, td {
 }
 
 th {
-  background-color: #2ecc71;
+  background-color: #8CF4FF;
   color: #fff;
 }
 
