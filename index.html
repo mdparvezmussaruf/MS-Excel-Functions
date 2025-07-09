@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +13,9 @@
   <!-- Main Page -->
   <div id="mainPage">
     <h1>📘 Excel Functions Cheat Sheet</h1>
-    <!-- Your existing function tables here (basic, math, logical, etc.) -->
-    <!-- Keep all 9 sections from your original code -->
-          <h2>1️⃣ Basic Arithmetic Operators</h2>
+
+    <!-- Section 1 Example -->
+    <h2>1️⃣ Basic Arithmetic Operators</h2>
     <table>
         <tr><th>Operator</th><th>Purpose</th></tr>
         <tr><td>+</td><td>Adds two numbers</td></tr>
@@ -107,11 +109,15 @@
 
   </div>
 
+    <!-- Add your other sections here like before -->
+  </div>
+
   <!-- Shortcut Page -->
   <section id="shortcutPage" style="display: none;">
     <h1>⌨️ Excel Shortcut Commands</h1>
     <button id="goBackBtn">⬅️ Go Back</button>
-    <!-- Shortcut tables go here -->
+    <!-- Shortcut table content here -->
+         <!-- Shortcut tables go here -->
         <h2>🔹 Basic Shortcuts</h2>
     <table>
       <tr><th>Action</th><th>Shortcut</th></tr>
@@ -193,10 +199,7 @@
   <section id="advancedPage" style="display: none;">
     <h1>💡 Advanced Excel Functions Cheat Sheet</h1>
     <button id="goBackBtnAdvanced">⬅️ Go Back</button>
-    <!-- Paste advanced functions content here from previous message -->
-     
-
-  <h2>🔟 Array & Dynamic Array Functions</h2>
+    <!-- Advanced functions content here --> <h2>🔟 Array & Dynamic Array Functions</h2>
   <table>
     <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
     <tr><td>SEQUENCE</td><td>=SEQUENCE(rows, [cols], [start], [step])</td><td>Creates number sequence</td></tr>
@@ -250,7 +253,7 @@
     <tr><td>IMABS</td><td>=IMABS("a+bi")</td><td>Returns absolute value of complex number</td></tr>
   </table>
 
-   <h2>📊 Array & Matrix Functions</h2>
+     <h2>📊 Array & Matrix Functions</h2>
     <table>
       <tr><th>Function</th><th>Syntax</th><th>Description</th></tr>
       <tr><td>TRANSPOSE</td><td>=TRANSPOSE(array)</td><td>Rotates rows to columns and vice versa</td></tr>
@@ -308,18 +311,21 @@
       <tr><td>XOR</td><td>=XOR(logical1, logical2)</td><td>Exclusive OR logic</td></tr>
       <tr><td>SWITCH</td><td>=SWITCH(expr, val1, res1,...)</td><td>Conditional branching</td></tr>
     </table>
-    
   </section>
 
+
   <!-- Floating Toggle Menu -->
-  <div class="floating-menu" id="floatingMenu">
+  <div id="menuWrapper">
     <button id="mainToggle">☰</button>
-    <div class="menu-options" id="menuOptions">
-      <button class="option-btn" id="showShortcuts">⌨️ Shortcuts</button>
-      <button class="option-btn" id="showAdvanced">🚀 Advanced</button>
-    </div>
+    <button id="showShortcuts" class="floating-option" title="Shortcuts">⌨️</button>
+    <button id="showAdvanced" class="floating-option" title="Advanced">🚀</button>
   </div>
 
   <script src="index.js"></script>
+  <!-- Footer -->
+<footer id="footer">
+  <p>📎 Developed by <a href="https://mdparvezmussaruf.github.io/myPortfolio/" target="_blank">MD Parvez Mussaruf</a></p>
+</footer>
+
 </body>
 </html>
