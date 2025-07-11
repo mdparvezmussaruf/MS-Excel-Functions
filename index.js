@@ -35,32 +35,53 @@ goBackBtnAdvanced.addEventListener('click', () => {
   mainPage.style.display = 'block';
 });
 
-// Floating menu hover logic (4-second display)
+// Floating menu logic
 const mainToggle = document.getElementById("mainToggle");
 const showShortcutsBtn = document.getElementById("showShortcuts");
 const showAdvancedBtn = document.getElementById("showAdvanced");
 
 let hideTimer;
 
-// Show both buttons
+// Show both floating buttons
 function showFloatingButtons() {
   clearTimeout(hideTimer);
   showShortcutsBtn.style.display = "block";
   showAdvancedBtn.style.display = "block";
 }
 
-// Hide after delay
+// Hide after 1 second
 function hideFloatingButtonsWithDelay() {
   hideTimer = setTimeout(() => {
     showShortcutsBtn.style.display = "none";
     showAdvancedBtn.style.display = "none";
-  }, 1000); // 4 seconds
+  }, 1500);
 }
 
-// Hover handling
-mainToggle.addEventListener("mouseenter", showFloatingButtons);
-mainToggle.addEventListener("mouseleave", hideFloatingButtonsWithDelay);
-showShortcutsBtn.addEventListener("mouseenter", showFloatingButtons);
-showShortcutsBtn.addEventListener("mouseleave", hideFloatingButtonsWithDelay);
-showAdvancedBtn.addEventListener("mouseenter", showFloatingButtons);
-showAdvancedBtn.addEventListener("mouseleave", hideFloatingButtonsWithDelay);
+// Detect mobile
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
+// Click toggle for mobile
+mainToggle.addEventListener("click", () => {
+  if (isMobile()) {
+    const isVisible = showShortcutsBtn.style.display === "block";
+    if (isVisible) {
+      showShortcutsBtn.style.display = "none";
+      showAdvancedBtn.style.display = "none";
+    } else {
+      showFloatingButtons();
+      hideFloatingButtonsWithDelay();
+    }
+  }
+});
+
+// Hover logic for desktop
+if (!isMobile()) {
+  mainToggle.addEventListener("mouseenter", showFloatingButtons);
+  mainToggle.addEventListener("mouseleave", hideFloatingButtonsWithDelay);
+  showShortcutsBtn.addEventListener("mouseenter", showFloatingButtons);
+  showShortcutsBtn.addEventListener("mouseleave", hideFloatingButtonsWithDelay);
+  showAdvancedBtn.addEventListener("mouseenter", showFloatingButtons);
+  showAdvancedBtn.addEventListener("mouseleave", hideFloatingButtonsWithDelay);
+}
